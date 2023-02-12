@@ -19,6 +19,9 @@ function applab_register_job_post_type()
         'search_items' => __('Search Jobs', 'applab-career'),
         'not_found' => __('No jobs found', 'applab-career'),
         'not_found_in_trash' => __('No jobs found in Trash', 'applab-career'),
+        'featured_image' => __('Comapny Logo', 'applab-career'),
+        'set_featured_image' => __('set comapny logo', 'applab-career'),
+        'remove_featured_image' => __('remove comapny logo', 'applab-career'),
         'parent_item_colon' => '',
         'menu_name' => 'Job Manager'
     );
@@ -34,7 +37,7 @@ function applab_register_job_post_type()
         'has_archive' => true,
         'hierarchical' => false,
         'menu_position' => 5,
-        'supports' => array('title', 'editor', 'author', 'thumbnail')
+        'supports' => array('title', 'editor', 'thumbnail')
     );
     register_post_type('job_manager', $args);
     add_role('Applicant', 'Applicant');
